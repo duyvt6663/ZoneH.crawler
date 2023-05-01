@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.7.0" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.7.0" />
+    <PackageReference Include="Microsoft.ML.Vision" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ardin.ML.Model\Ardin.ML.Model.csproj" />
+    <!-- <ProjectReference Include="..\CaptchaSolver.DrCaptcha.ir.Engine\CaptchaSolver.DrCaptcha.ir.Engine.csproj" /> -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- <Reference Include="CaptchaSolver.DrCaptcha.ir.Engine">
+      <HintPath>..\Ardin.ZoneHCaptchaSolver.Sample\Dependencies\CaptchaSolver.DrCaptcha.ir.Engine.dll</HintPath>
+    </Reference> -->
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\Ardin.ZoneHCaptchaSolver.Sample\Dependencies\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>..\Ardin.ZoneHCaptchaSolver.Sample\Dependencies\AForge.dll</HintPath>
+    </Reference>
+    <!-- <Reference Include="CaptchaSolver.DrCaptcha.ir.Engine">
+      <HintPath>..\CaptchaSolver.DrCaptcha.ir.Engine\MethodsImageFilter.cs</HintPath>
+    </Reference> -->
+    <Compile Include="..\CaptchaSolver.DrCaptcha.ir.Engine\MethodsImageFilter.cs" />
+    <Compile Include="..\CaptchaSolver.DrCaptcha.ir.Engine\ImageFilterAttribute.cs" />
+  </ItemGroup>
+  
+</Project>
